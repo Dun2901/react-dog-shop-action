@@ -4,7 +4,7 @@ import "./Dogs.css";
 
 const DogsCart = (props) => {
   const { id, name, breed, description, price, imageUrl } = props;
-  const { addToCart } = useContext(AppContext);
+  const { addToCart, setTotal } = useContext(AppContext);
   const [isAdded, setIsAdded] = useState(false);
 
   const handleClick = () => {
@@ -15,6 +15,7 @@ const DogsCart = (props) => {
       imageUrl: imageUrl,
     };
     addToCart((item) => [...item, newItems]);
+    setTotal((total) => (total += Number(price)));
   };
 
   return (

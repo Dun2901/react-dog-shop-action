@@ -1,10 +1,15 @@
 import React from "react";
+import { LuDog } from "react-icons/lu";
 import "./Home.css";
 
 const Home = () => {
   return (
     <>
-      <header>WELCOME TO MY PET SHOP</header>
+      <header>
+        <LuDog />
+        WELCOME TO MY PET SHOP
+        <LuDog />
+      </header>
     </>
   );
 };
